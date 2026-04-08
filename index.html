@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Launchpad — Deploy with Coolify</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="logo-dot"></span>Launchpad
+      </a>
+      <ul class="nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#deploy">Deploy</a></li>
+      </ul>
+      <a href="#deploy" class="btn btn--sm">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="container">
+      <div class="badge">Deployed via Coolify</div>
+      <h1 class="hero__title">
+        Ship your app.<br />
+        <span class="gradient-text">Own your infrastructure.</span>
+      </h1>
+      <p class="hero__subtitle">
+        This is an example project showing how fast you can go from zero to a
+        live, self-hosted web app using Coolify — no vendor lock-in, no surprise bills.
+      </p>
+      <div class="hero__cta">
+        <a href="#deploy" class="btn btn--primary">Deploy this site</a>
+        <a href="https://coolify.io" target="_blank" rel="noopener" class="btn btn--ghost">Learn about Coolify &rarr;</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__value">100%</span>
+          <span class="stat__label">Self-hosted</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">&lt;2 min</span>
+          <span class="stat__label">Deploy time</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">$0</span>
+          <span class="stat__label">Platform fees</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section__title">Why self-host?</h2>
+      <p class="section__subtitle">Everything you get with Coolify that you'd pay a premium for elsewhere.</p>
+      <div class="grid grid--3">
+        <div class="card">
+          <div class="card__icon">&#9881;</div>
+          <h3>One-click deploys</h3>
+          <p>Connect your Git repository and Coolify handles builds, rollbacks, and zero-downtime restarts automatically.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#128274;</div>
+          <h3>Auto SSL</h3>
+          <p>Free Let's Encrypt certificates provisioned and renewed automatically for every domain you point at your server.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#128200;</div>
+          <h3>Built-in monitoring</h3>
+          <p>Real-time resource graphs, logs, and health checks — all from the Coolify dashboard, no extra tooling required.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#128451;</div>
+          <h3>Managed databases</h3>
+          <p>Spin up PostgreSQL, MySQL, Redis, or MongoDB instances with automated backups in under a minute.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#128640;</div>
+          <h3>Any framework</h3>
+          <p>Nixpacks auto-detects Node, Python, PHP, Go, Ruby, static sites, and more — no Dockerfile required.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#128101;</div>
+          <h3>Team support</h3>
+          <p>Invite teammates, set permissions, and manage multiple projects and servers from a single Coolify instance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">This project's stack</h2>
+      <p class="section__subtitle">Minimal by design — a static site served by Nginx inside Docker.</p>
+      <div class="stack-list">
+        <div class="stack-item">
+          <span class="stack-item__label">HTML / CSS / JS</span>
+          <span class="stack-item__desc">No build step, no dependencies, ships as-is.</span>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item__label">Nginx</span>
+          <span class="stack-item__desc">Lightweight static file server with gzip enabled.</span>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item__label">Docker</span>
+          <span class="stack-item__desc">Single-stage Dockerfile — builds in seconds.</span>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item__label">Coolify</span>
+          <span class="stack-item__desc">Handles CI, proxy, SSL, and deployment lifecycle.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPLOY STEPS -->
+  <section id="deploy" class="section">
+    <div class="container">
+      <h2 class="section__title">Deploy it yourself</h2>
+      <p class="section__subtitle">Four steps to your own live copy.</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <div>
+            <strong>Fork this repo</strong>
+            <p>Click <em>Fork</em> on GitHub to get your own copy of the source code.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <div>
+            <strong>Install Coolify</strong>
+            <p>Run the one-line install script on any VPS (Hetzner, DigitalOcean, Vultr…).</p>
+            <code class="code-block">curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash</code>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <div>
+            <strong>Create a new resource</strong>
+            <p>In Coolify: <em>New Resource &rarr; Public Repository</em>, paste your fork URL, choose the <code>Dockerfile</code> build pack.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__num">04</span>
+          <div>
+            <strong>Add your domain &amp; deploy</strong>
+            <p>Point your DNS at your server, set the domain in Coolify, and hit <strong>Deploy</strong>. SSL is automatic.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Built as an example for <a href="https://coolify.io" target="_blank" rel="noopener">Coolify</a></span>
+      <span class="footer__right">MIT License &middot; <a href="https://github.com/jonny190/ExampleWeb" target="_blank" rel="noopener">Source on GitHub</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
